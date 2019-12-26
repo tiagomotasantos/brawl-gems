@@ -1,0 +1,13 @@
+.container {
+    background: $dark-blue;
+    border-bottom: 5px solid darken($dark-blue-opaque, 10%);
+    border-radius: 2px;
+    border-top: 5px solid lighten($dark-blue-opaque, 10%);
+    box-shadow: 0px 4px 4px 0px black, 0px 0px 1px 2px black;
+}
+
+.content-container {
+    margin: 0 auto;
+    padding: 0 $m-size;
+    max-width: 140rem;
+}

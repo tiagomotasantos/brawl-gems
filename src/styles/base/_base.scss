@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+ }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: white;
+    font-family: 'Lilita One', Arial, sans-serif;
+    font-size: $m-size;
+    font-weight: 300;
+    line-height: 1.6;
+}

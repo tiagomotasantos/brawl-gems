@@ -1,0 +1,30 @@
+.header {
+    min-height: 6rem;
+}
+
+.header__content {
+    align-items: center;
+    display: flex;
+}
+
+.header__image {
+    width: $xl-size;
+}
+
+.header__title {
+    font-size: $font-size-large;
+    margin: 0 $s-size;
+}
+
+.header__link {
+    color: $grey;
+    text-decoration: none;
+    h1 {
+        font-size: $font-size-medium;
+        margin: 0 $s-size;
+    }
+}
+
+.header__link--selected {
+    color: white;
+}

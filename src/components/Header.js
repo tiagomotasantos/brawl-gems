@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => (
-    <header>
-        <Link className="header__title" to="/players">
-            <h1>Players</h1>
-        </Link>
+    <header className="container header">
+        <div className="content-container">
+            <div className="header__content">
+                <img className="header__image" alt="Logo" src="/images/logo.png" />
+                <h1 className="header__title show-for-desktop">BRAWL GEMS</h1>
+                <NavLink to="/players" className="header__link" activeClassName="header__link--selected">
+                    <h1>PLAYERS</h1>
+                </NavLink>
+            </div>
+        </div>
     </header>
 );
