@@ -12,17 +12,22 @@ const FindPlayerPage = () => {
     }
 
     return (    
-        <div>
-            <div>Find player by tag</div>
-            <form onSubmit={onSubmit}>
-                <input 
+        <div className="content-container find-player__content">
+            <img alt="Brawl Stars" src="/images/full_logo.png" className="find-player__logo"></img>
+            <h3 className="find-player__title">Player Analysis</h3>
+            <form onSubmit={onSubmit} className="find-player__form">
+                <div className="find-player__hashtag">#</div>
+                <input
+                    className="input"
                     type="text"
                     value={tag}
                     placeholder="Player tag"
                     autoFocus
                     onChange={(e) => setTag(e.target.value)}
                 />
-                <button>Find</button>
+                <button className="find-player__button">
+                    <img alt="Search" src="/images/search.png" />
+                </button>
             </form>
         </div>
     );

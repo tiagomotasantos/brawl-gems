@@ -2,8 +2,15 @@
 $dark-blue: #343D50;
 $dark-blue-opaque: rgba(52,61,80, 0.5);
 $grey: #C0C0C0;
+$light-blue: #3EBEED;
+$light-gold: #F3B821;
+$yellow: #EBC508;
+
+// Text Colors
+$primary-text: white;
  
 // Font Size
+$font-size-xlarge: 5.6rem;
 $font-size-large: 3rem;
 $font-size-medium: 1.6rem;
 $font-size-small: 1.4rem;
@@ -14,6 +21,9 @@ $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
 $desktop-breakpoint: 45rem;
+
+// Angles
+$box-angle: -4deg;
 
 // Fonts
 @font-face {

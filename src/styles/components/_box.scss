@@ -1,0 +1,15 @@
+.box {
+    background: $dark-blue;
+    border: none;
+    border-bottom: 5px solid darken($dark-blue-opaque, 10%);
+    border-radius: 2px;
+    border-top: 5px solid lighten($dark-blue-opaque, 10%);
+    box-shadow: 0px 1px 2px 0px black, 0px 0px 6px 1px black;
+}
+
+.box--yellow {
+    @extend .box;
+    background: $yellow;
+    border-bottom: 5px solid darken($yellow, 10%);
+    border-top: 5px solid lighten($yellow, 10%);
+}

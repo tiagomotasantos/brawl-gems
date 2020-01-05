@@ -1,0 +1,20 @@
+.input {
+    @extend .box;
+
+    background: rgba($dark-blue, 0.8);
+    color: $primary-text;
+    height: 6rem;
+    outline: none;
+    padding: $s-size;
+    text-transform: uppercase;
+    transform: skewX($box-angle);
+    width: 50rem;
+
+    &::placeholder {
+        color: $grey;
+    }
+
+    @media (max-width: $desktop-breakpoint) {
+        width: 100%;
+    }
+}
