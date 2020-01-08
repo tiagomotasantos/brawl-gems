@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import BrawlContext from '../context/brawl-context';
 import { getPlayer } from '../services/player';
+import { setPlayer } from '../actions/brawl';
 
-const FindPlayerPage = () => {
+const FindPlayerPage = (props) => {
+    const { dispatch } = useContext(BrawlContext);
     const [tag, setTag] = useState('');
     const onSubmit = (e) => {
         e.preventDefault();
 
-        getPlayer(tag).then(res => console.log(res));
-
-        //setTag('');
+        getPlayer(tag).then(res => {
+            dispatch(setPlayer(res));
+            props.history.push(`/players/${tag}`);
+        });
     }
 
     return (    
