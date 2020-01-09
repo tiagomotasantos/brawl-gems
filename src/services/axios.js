@@ -1,13 +1,9 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'https://api.brawlstats.com/'
+    baseURL: 'https://api.starlist.pro/v1/'
 });
 
-export const login = () => {
-    axiosInstance.get('v6/auth/exchange-key').then(({ data }) => {
-        axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${data}`;;
-    });
-}
+axiosInstance.defaults.headers.common['Authorization'] = process.env.REACT_APP_API_TOKEN;
 
 export default axiosInstance;
