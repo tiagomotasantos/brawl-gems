@@ -7,7 +7,7 @@ export const Header = () => (
             <div className="header__content">
                 <img className="header__image" alt="Logo" src="/images/logo.png" />
                 <h1 className="header__title show-for-desktop">BRAWL GEMS</h1>
-                <NavLink to="/players" className="header__link" activeClassName="header__link--selected">
+                <NavLink exact to="/players" className="header__link" activeClassName="header__link--selected">
                     <h1>PLAYERS</h1>
                 </NavLink>
             </div>
