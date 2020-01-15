@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history'
-import { Header } from '../components/Header';
+import Header from '../components/Header';
 import FindPlayerPage from '../components/FindPlayerPage';
 import PlayerPage from '../components/PlayerPage';
 import BrawlContext from '../context/brawl-context';
