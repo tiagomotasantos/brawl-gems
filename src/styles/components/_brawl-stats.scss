@@ -1,0 +1,26 @@
+.brawl-stats {
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-right: $xl-size;
+    min-width: 20rem;
+    padding: 1rem 8rem;
+    position: relative;
+    transform: skewX($box-angle);
+}
+
+.brawl-stats__icon {
+    left: -35px;
+    position: absolute;
+    top: 0;
+    width: 6rem;
+}
+
+.brawl-stats__label {
+    color: $grey;
+    position: absolute;
+    text-transform: uppercase;
+    top: -25px;
+    width: fit-content;
+}
