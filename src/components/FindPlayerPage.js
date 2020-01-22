@@ -6,13 +6,16 @@ import { setPlayer } from '../actions/brawl';
 const FindPlayerPage = (props) => {
     const { dispatch } = useContext(BrawlContext);
     const [tag, setTag] = useState('');
+    const [loading, setLoading] = useState(true);
     const onSubmit = (e) => {
         e.preventDefault();
 
+        setLoading(true);
         getPlayer(tag).then(res => {
             dispatch(setPlayer(res));
             props.history.push(`/players/${tag}`);
-        });
+        })
+        .catch(() => setLoading(false));
     }
 
     return (    
@@ -30,7 +33,8 @@ const FindPlayerPage = (props) => {
                     onChange={(e) => setTag(e.target.value)}
                 />
                 <button className="find-player__button">
-                    <img alt="Search" src="/images/search.png" />
+                    { !loading && <img alt="Search" src="/images/search.png" /> }
+                    { loading && <div className="find-player__button--loading"></div> }
                 </button>
             </form>
         </div>
