@@ -24,3 +24,10 @@
     top: -25px;
     width: fit-content;
 }
+
+@media (max-width: $desktop-breakpoint) {
+    .brawl-stats {
+        margin-right: 0;
+        margin-bottom: $xl-size;
+    }
+}
