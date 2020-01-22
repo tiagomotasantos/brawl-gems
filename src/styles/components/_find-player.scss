@@ -15,6 +15,12 @@
     width: 30rem;
 }
 
+.find-player__error {
+    color: $yellow;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 .find-player__form {
     align-items: center;
     display: flex;
