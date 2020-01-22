@@ -6,7 +6,7 @@ import { setPlayer } from '../actions/brawl';
 const FindPlayerPage = (props) => {
     const { dispatch } = useContext(BrawlContext);
     const [tag, setTag] = useState('');
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const onSubmit = (e) => {
         e.preventDefault();
 
