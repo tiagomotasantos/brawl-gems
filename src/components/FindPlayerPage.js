@@ -32,9 +32,9 @@ const FindPlayerPage = (props) => {
                     autoFocus
                     onChange={(e) => setTag(e.target.value)}
                 />
-                <button className="find-player__button">
+                <button className={loading ? "find-player__button find-player__button--loading" : "find-player__button"}>
                     { !loading && <img alt="Search" src="/images/search.png" /> }
-                    { loading && <div className="find-player__button--loading"></div> }
+                    { loading && <div className="find-player__button-loader"></div> }
                 </button>
             </form>
         </div>
