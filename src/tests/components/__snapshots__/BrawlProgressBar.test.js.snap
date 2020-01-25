@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BrawlProgressBar 1`] = `
+<div
+  className="progress-bar"
+>
+  <div
+    className="progress-bar__inner"
+    style={
+      Object {
+        "backgroundColor": "#3EBEED",
+        "borderBottom": "1.8rem solid hsl(196.10000000000002, 82.9%, 35.2%)",
+        "width": 1,
+      }
+    }
+  />
+  <div
+    className="progess-bar__values-container"
+  >
+    <span
+      className="progess-bar__values"
+    >
+      100
+      /
+      10000
+    </span>
+    <img
+      alt="icon"
+      className="progess-bar__icon"
+      src="/images/level.png"
+    />
+    <span
+      className="progress-bar__value"
+    >
+      59
+    </span>
+  </div>
+</div>
+`;
