@@ -14,7 +14,7 @@ const BrawlProgressBar = ({ value, icon, current, max, color }) => (
         </div>
         <div className="progess-bar__values-container">
             <span className="progess-bar__values">{current}/{max}</span>
-            <img alt="Adfsa" src={icon} className="progess-bar__icon" />
+            <img alt="icon" src={icon} className="progess-bar__icon" />
             <span className="progress-bar__value">{value}</span>
         </div>
     </div>
