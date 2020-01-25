@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BrawlStats 1`] = `
+<div
+  className="brawl-stats"
+>
+  <img
+    alt="Trophies"
+    className="brawl-stats__icon"
+    src="/images/trophy.png"
+  />
+  <span
+    className="brawl-stats__label"
+  >
+    Trophies
+  </span>
+  <span
+    className="brawl-stats__value"
+  >
+    6262
+  </span>
+</div>
+`;
