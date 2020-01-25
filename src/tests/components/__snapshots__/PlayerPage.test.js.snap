@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PlayerPage 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="player-general-info"
+  >
+    <div
+      className="player-general-info__content"
+    >
+      <div
+        className="player-general-info__image-tag"
+      >
+        <img
+          alt="Mottyze"
+          className="player-general-info__image"
+          src="https://www.starlist.pro/assets/profile/28000000.png"
+        />
+        <span
+          className="player-general-info__tag"
+        >
+          #
+          9RCQGYC8Y
+        </span>
+      </div>
+      <div
+        className="player-general-info__col"
+      >
+        <span
+          className="player-general-info__name"
+        >
+          Mottyze
+        </span>
+        <BrawlProgressBar
+          color="#3EBEED"
+          current="402"
+          icon="/images/level.png"
+          max="620"
+          value={59}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="player-stats-container"
+  >
+    <div
+      className="player-stats-container__row"
+    >
+      <BrawlStats
+        icon="/images/trophy.png"
+        label="Trophies"
+        value={6262}
+      />
+      <BrawlStats
+        icon="/images/ranking.png"
+        label="Highest Trophies"
+        value={6277}
+      />
+    </div>
+    <div
+      className="player-stats-container__row"
+    >
+      <BrawlStats
+        icon="/images/solo.png"
+        label="Solo Victories"
+        value={62}
+      />
+      <BrawlStats
+        icon="/images/3vs3.png"
+        label="3 vs 3 Victories"
+        value={830}
+      />
+    </div>
+    <div
+      className="player-stats-container__row"
+    >
+      <BrawlStats
+        icon="/images/duo.png"
+        label="Duo Victories"
+        value={128}
+      />
+      <BrawlStats
+        icon="/images/robo-rumble.png"
+        label="Best Robo Rumble Time"
+        value="4m 24s"
+      />
+    </div>
+    <div
+      className="player-stats-container__row"
+    >
+      <BrawlStats
+        icon="/images/big-brawler.png"
+        label="Best Time as Big Brawler"
+        value="2m 53s"
+      />
+      <BrawlStats
+        icon="/images/power-play.png"
+        label="Highest Power Play"
+        value={316}
+      />
+    </div>
+  </div>
+</div>
+`;
