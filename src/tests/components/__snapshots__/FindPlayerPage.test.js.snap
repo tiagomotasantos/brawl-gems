@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FindPlayerPage 1`] = `
+<div
+  className="content-container find-player__content"
+>
+  <img
+    alt="Brawl Stars"
+    className="find-player__logo"
+    src="/images/full_logo.png"
+  />
+  <h3
+    className="find-player__title"
+  >
+    Player Analysis
+  </h3>
+  <form
+    className="find-player__form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="find-player__hashtag"
+    >
+      #
+    </div>
+    <input
+      autoFocus={true}
+      className="input"
+      onChange={[Function]}
+      placeholder="Player tag"
+      type="text"
+      value=""
+    />
+    <button
+      className="find-player__button"
+    >
+      <img
+        alt="Search"
+        src="/images/search.png"
+      />
+    </button>
+  </form>
+</div>
+`;
