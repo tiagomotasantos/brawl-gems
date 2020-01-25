@@ -1,3 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Header 1`] = `ShallowWrapper {}`;
+exports[`should render Header 1`] = `
+<header
+  className="box header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
+    >
+      <img
+        alt="Logo"
+        className="header__image"
+        src="/images/logo.png"
+      />
+      <h1
+        className="header__title show-for-desktop"
+      >
+        BRAWL GEMS
+      </h1>
+      <NavLink
+        activeClassName="header__link--selected"
+        className="header__link"
+        exact={true}
+        to="/players"
+      >
+        <h1>
+          PLAYERS
+        </h1>
+      </NavLink>
+    </div>
+  </div>
+</header>
+`;
