@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Redirect, Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 import Header from '../components/Header';
 import FindPlayerPage from '../components/FindPlayerPage';
@@ -40,6 +40,7 @@ const AppRouter = () => {
                     path="/players/:tag" 
                     value={{ state, dispatch }} 
                 />
+                <Redirect to="/players" />
             </Switch>
         </Router>
     );
