@@ -51,3 +51,21 @@
     display: flex;
     margin-bottom: $xl-size;
 }
+
+@media (max-width: $desktop-breakpoint) {
+    .player-general-info__content {
+        flex-direction: column;
+    }
+
+    .player-general-info__image-tag {
+        justify-content: center;
+    }
+
+    .player-stats-container__row {
+        flex-direction: column;
+    }
+
+    .player-general-info__col {
+        margin-left: 0;
+    }
+}
