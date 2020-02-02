@@ -4,6 +4,7 @@
     border-radius: 4px;
     box-shadow: 0 0 0 2px black;
     height: 4rem;
+    margin-bottom: $s-size;
     position: relative;
     transform: skewX($box-angle);
     width: 25rem;
