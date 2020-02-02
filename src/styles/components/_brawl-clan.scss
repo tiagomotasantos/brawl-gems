@@ -1,0 +1,26 @@
+.brawl-clan {
+    background-color: $dark-blue;
+    border-bottom: 1.6rem solid lighten($dark-blue-opaque, 10%);
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px black;
+    height: 4rem;
+    margin-bottom: $s-size;
+    position: relative;
+    transform: skewX($box-angle);
+    width: 25rem;
+}
+
+.brawl-clan__values-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+.brawl-clan__icon {
+    left: -20px;
+    position: absolute;
+    top: -10px;
+    width: 4.2rem;
+}

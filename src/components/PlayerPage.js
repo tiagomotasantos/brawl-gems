@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import BrawlContext from '../context/brawl-context';
 import BrawlStats from './BrawlStats';
 import BrawlProgressBar from './BrawlProgressBar';
+import BrawlClan from './BrawlClan';
 
 const PlayerPage = () => {
     const { state } = useContext(BrawlContext);
@@ -22,7 +23,14 @@ const PlayerPage = () => {
                         <span className="player-general-info__name">
                             {data.name}
                         </span>
-                        <BrawlProgressBar value={data.expLevel} icon="/images/level.png" current={current} max={max} color="#3EBEED"/>
+                        <BrawlProgressBar 
+                            value={data.expLevel} 
+                            icon="/images/level.png" 
+                            current={current} 
+                            max={max} 
+                            color="#3EBEED"
+                        />
+                        { data.hasClub && <BrawlClan icon={data.club.badgeUrl} value={data.club.name} /> }
                     </div>
                 </div>
             </div>

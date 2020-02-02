@@ -40,6 +40,10 @@ exports[`should render PlayerPage 1`] = `
           max="620"
           value={59}
         />
+        <BrawlClan
+          icon="https://www.starlist.pro/img/club/0.png"
+          value="LEGIÃO PT"
+        />
       </div>
     </div>
   </div>
