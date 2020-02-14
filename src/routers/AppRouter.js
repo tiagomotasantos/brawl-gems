@@ -39,6 +39,7 @@ const AppRouter = () => {
                     component={PlayerPage}
                     path="/players/:tag" 
                     value={{ state, dispatch }} 
+                    componentProps={{ history }}
                 />
                 <Redirect to="/players" />
             </Switch>

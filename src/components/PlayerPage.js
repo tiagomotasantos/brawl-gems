@@ -1,91 +1,109 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import BrawlContext from '../context/brawl-context';
 import BrawlStats from './BrawlStats';
 import BrawlProgressBar from './BrawlProgressBar';
 import BrawlClan from './BrawlClan';
 
-const PlayerPage = () => {
+const PlayerPage = ({ history }) => {
     const { state } = useContext(BrawlContext);
-    const { player: { data } } = state;
-    const [current, max] = data.expFmt.split('/');
+    const [player, setPlayer] = useState();
+    const [current, setCurrent] = useState();
+    const [max, setMax] = useState();
+
+    useEffect(() => {
+        setupPlayer(state, setPlayer, setCurrent, setMax, history)
+    }, []);
 
     return (    
         <div className="content-container">
-            <div className="player-general-info">
+            { player && <div className="player-general-info">
                 <div className="player-general-info__content">
                     <div className="player-general-info__image-tag">
-                        <img alt={data.name} src={data.avatarUrl} className="player-general-info__image" />
+                        <img alt={player.name} src={player.avatarUrl} className="player-general-info__image" />
                         <span className="player-general-info__tag">
-                            #{data.tag}
+                            #{player.tag}
                         </span>
                     </div>
                     <div className="player-general-info__col">
                         <span className="player-general-info__name">
-                            {data.name}
+                            {player.name}
                         </span>
                         <BrawlProgressBar 
-                            value={data.expLevel} 
+                            value={player.expLevel} 
                             icon="/images/level.png" 
                             current={current} 
                             max={max} 
                             color="#3EBEED"
                         />
-                        { data.hasClub && <BrawlClan icon={data.club.badgeUrl} value={data.club.name} /> }
+                        { player.hasClub && <BrawlClan icon={player.club.badgeUrl} value={player.club.name} /> }
                     </div>
                 </div>
-            </div>
-            <div className="player-stats-container">
+            </div>}
+            { player && <div className="player-stats-container">
                 <div className="player-stats-container__row">
                     <BrawlStats 
                         label="Trophies"
                         icon="/images/trophy.png" 
-                        value={data.trophies}
+                        value={player.trophies}
                     />
                     <BrawlStats 
                         label="Highest Trophies"
                         icon="/images/ranking.png" 
-                        value={data.highestTrophies}
+                        value={player.highestTrophies}
                     />
                 </div>
                 <div className="player-stats-container__row">
                     <BrawlStats 
                         label="Solo Victories"
                         icon="/images/solo.png" 
-                        value={data.soloShowdownVictories}
+                        value={player.soloShowdownVictories}
                     />
                     <BrawlStats 
                         label="3 vs 3 Victories"
                         icon="/images/3vs3.png" 
-                        value={data.victories}
+                        value={player.victories}
                     />
                 </div>
                 <div className="player-stats-container__row">
                     <BrawlStats 
                         label="Duo Victories"
                         icon="/images/duo.png" 
-                        value={data.duoShowdownVictories}
+                        value={player.duoShowdownVictories}
                     />
                     <BrawlStats 
                         label="Best Robo Rumble Time"
                         icon="/images/robo-rumble.png" 
-                        value={data.bestRoboRumbleTime}
+                        value={player.bestRoboRumbleTime}
                     />
                 </div>
                 <div className="player-stats-container__row">
                     <BrawlStats 
                         label="Best Time as Big Brawler"
                         icon="/images/big-brawler.png" 
-                        value={data.bestTimeAsBigBrawler}
+                        value={player.bestTimeAsBigBrawler}
                     />
                     <BrawlStats 
                         label="Highest Power Play"
                         icon="/images/power-play.png" 
-                        value={data.highestPowerPlayPoints}
+                        value={player.highestPowerPlayPoints}
                     />
                 </div>
-            </div>
+            </div>}
         </div>
     );
+};
+
+const setupPlayer = (state, setPlayer, setCurrent, setMax, history) => {
+    const player = state.player;
+
+    if (player) {
+        const [current, max] = player.data.expFmt.split('/');
+        setCurrent(current);
+        setMax(max);
+        setPlayer(player.data);
+    } else {
+        history.push('/players');
+    }
 };
 
 export default PlayerPage;
